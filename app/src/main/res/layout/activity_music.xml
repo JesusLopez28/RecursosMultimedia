@@ -1,0 +1,132 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/spotify_black"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Botón para regresar en la esquina superior izquierda ic_back -->
+
+    <!-- Imagen de la canción -->
+    <ImageButton
+        android:id="@+id/btnBack"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginEnd="160dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:src="@drawable/ic_back"
+        app:tint="@color/spotify_green" />
+
+    <ImageView
+        android:id="@+id/imgSong"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="@string/description_song_image"
+        android:src="@drawable/song_image" />
+
+    <!-- Nombre del archivo de la canción -->
+    <TextView
+        android:id="@+id/tvFileName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="@string/song_name"
+        android:textAlignment="center"
+        android:textColor="@color/spotify_white"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <!-- Artista de la canción -->
+    <TextView
+        android:id="@+id/tvArtistName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="@string/artist_name"
+        android:textAlignment="center"
+        android:textColor="@color/spotify_grey"
+        android:textSize="16sp" />
+
+    <!-- Barra de progreso de la canción -->
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:progressBackgroundTint="@color/spotify_white"
+        android:progressTint="@color/spotify_green"
+        android:thumbTint="@color/spotify_green" />
+
+    <!-- Texto del tiempo transcurrido y la duración total -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:orientation="horizontal"
+        android:paddingHorizontal="8dp">
+
+        <!-- Tiempo transcurrido -->
+        <TextView
+            android:id="@+id/tvCurrentTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/spotify_white"
+            android:textSize="14sp"
+            android:text="00:00"
+            android:layout_marginStart="10dp"/>
+
+        <TextView
+            android:id="@+id/tvTotalTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginStart="250dp"
+            android:text="00:00"
+            android:textColor="@color/spotify_white"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <!-- Contenedor de controles de reproducción -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <!-- Botón para retroceder -->
+        <ImageButton
+            android:id="@+id/btnRewind"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginEnd="16dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/description_rewind"
+            android:src="@drawable/ic_rewind"
+            app:tint="@color/spotify_green" />
+
+        <!-- Botón para reproducir/pausar -->
+        <ImageButton
+            android:id="@+id/btnPlayPause"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginEnd="16dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/description_play"
+            android:src="@drawable/ic_play"
+            app:tint="@color/spotify_green" />
+
+        <!-- Botón para adelantar -->
+        <ImageButton
+            android:id="@+id/btnForward"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/description_forward"
+            android:src="@drawable/ic_forward"
+            app:tint="@color/spotify_green" />
+    </LinearLayout>
+</LinearLayout>

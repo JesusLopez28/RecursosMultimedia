@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">MediaPlayer</string>
+    <string name="song_name">Mariage dAmour</string>
+    <string name="description_play">Reproducir</string>
+    <string name="description_pause">Pausar</string>
+    <string name="description_forward">Adelantar</string>
+    <string name="description_rewind">Retroceder</string>
+    <string name="description_song_image">Imagen de la canción</string>
+    <string name="artist_name">Calvin Clavier</string>
+    <string name="description_video_view">Video view</string>
+    <string name="video_name">Playa Tranquila</string>
+    <string name="menu_title">Media Menu</string>
+    <string name="music_label">Reproductor de Música</string>
+    <string name="video_label">Reproductor de Video</string>
+</resources>

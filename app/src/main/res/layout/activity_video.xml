@@ -1,0 +1,120 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/youtube_black"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Imagen de la canción -->
+    <ImageButton
+        android:id="@+id/btnBack"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginEnd="160dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:src="@drawable/ic_back"
+        app:tint="@color/youtube_red" />
+
+    <!-- Vista de video -->
+    <VideoView
+        android:id="@+id/videoView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="@string/description_video_view" />
+
+    <!-- Nombre del archivo de video -->
+    <TextView
+        android:id="@+id/tvFileName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="@string/video_name"
+        android:textAlignment="center"
+        android:textColor="@color/youtube_white"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <!-- Barra de progreso del video -->
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:progressBackgroundTint="@color/youtube_white"
+        android:progressTint="@color/youtube_red"
+        android:thumbTint="@color/youtube_red" />
+
+    <!-- Texto del tiempo transcurrido y la duración total -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:orientation="horizontal"
+        android:paddingHorizontal="8dp">
+
+        <!-- Tiempo transcurrido -->
+        <TextView
+            android:id="@+id/tvCurrentTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="00:00"
+            android:textColor="@color/youtube_white"
+            android:textSize="14sp" />
+
+        <!-- Tiempo total -->
+        <TextView
+            android:id="@+id/tvTotalTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginStart="250dp"
+            android:text="00:00"
+            android:textColor="@color/youtube_white"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <!-- Contenedor de controles de reproducción -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <!-- Botón para retroceder -->
+        <ImageButton
+            android:id="@+id/btnRewind"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginEnd="16dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/description_rewind"
+            android:src="@drawable/ic_rewind"
+            app:tint="@color/youtube_red" />
+
+        <!-- Botón para reproducir/pausar -->
+        <ImageButton
+            android:id="@+id/btnPlayPause"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginEnd="16dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/description_play"
+            android:src="@drawable/ic_play"
+            app:tint="@color/youtube_red" />
+
+        <!-- Botón para adelantar -->
+        <ImageButton
+            android:id="@+id/btnForward"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/description_forward"
+            android:src="@drawable/ic_forward"
+            app:tint="@color/youtube_red" />
+    </LinearLayout>
+</LinearLayout>
